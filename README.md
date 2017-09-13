@@ -26,7 +26,7 @@ NCTU Thesis Template for LaTeX
 
 2. Fill in the time of your submission in `covers/front.tex` and `covers/inside.tex`.
 
-3. In `thesis.tex`, there is a flag called `paper` which can help you switch the format between paper submission from electronic submission.
+3. In `thesis.tex`, there is a flag called `paper` which can help you switch the format between paper submission and electronic submission.
 
 ```
 \settoggle{paper}{false} % set to true for paper submission
@@ -39,6 +39,13 @@ NCTU Thesis Template for LaTeX
 - Electronic submission
     - Margin: 2.5cm-2.5cm-3cm-2cm
     - With watermark
+
+4. After oral defense, upload the required forms and documents and update the path in `thesis.tex`.
+
+```
+\includepdf{pdf/certification.pdf}
+\includepdf{pdf/authorization.pdf}
+```
 
 # Environment
 
