@@ -12,21 +12,27 @@ NCTU Thesis Template for LaTeX
 
 # Configuration
 
-1. Fill in the thesis title and your name in `thesis.tex`.
+1. Fill in the thesis information in `thesis.tex`.
 
 ```
-\newcommand{\chineseTitle}{基於卷積神經網路的論文自動生成技術}
-\newcommand{\englishTitle}{A CNN-based Automatic Thesis Generation Technique}
-
-\newcommand{\studentChName}{王大明}
-\newcommand{\studentEnName}{Ta-Ming Wang}
-\newcommand{\advisorChName}{吳小松}
-\newcommand{\advisorEnName}{Xiao-Sung Wu}
+\def\universityCh{國立交通大學}
+\def\universityEn{National Chiao Tung University}
+\def\collegeCh{資訊學院}
+\def\collegeEn{College of Computer Science}
+\def\instituteCh{資訊科學與工程研究所}
+\def\instituteEn{Institute of Computer Science and Engineering}
+\def\degree{Master in Computer Science}
+\def\titleCh{基於卷積神經網路的論文自動生成技術}
+\def\titleEn{A CNN-based Automatic Thesis Generation Technique}
+\def\studentCh{王大明}
+\def\studentEn{Ta-Ming Wang}
+\def\advisorCh{吳小松}
+\def\advisorEn{Xiao-Sung Wu}
+\def\defenseYear{2017}\def\defenseYearROC{106}
+\def\defenseMonth{9}\def\defenseMonthEn{September}
 ```
 
-2. Fill in the time of your submission in `covers/front.tex` and `covers/inside.tex`.
-
-3. In `thesis.tex`, there is a flag called `paper` which can help you switch the format between paper submission and electronic submission.
+2. In `thesis.tex`, there is a flag called `paper` which can help you switch the format between paper submission and electronic submission.
 
 ```
 \settoggle{paper}{false} % set to true for paper submission
@@ -35,12 +41,12 @@ NCTU Thesis Template for LaTeX
 - Paper submission
     - Margin: 2.5cm-2.5cm-2.5cm-2.5cm
     - Without watermark
-    - With required documents
+    - With required documents (i.e., 論文審訂書, 圖書館電子授權書)
 - Electronic submission
     - Margin: 2.5cm-2.5cm-3cm-2cm
     - With watermark
 
-4. After oral defense, upload the required forms and documents and update the path in `thesis.tex`.
+3. After oral defense, update the paths of required forms and documents in `thesis.tex`.
 
 ```
 \includepdf{pdf/certification.pdf}
