@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper,oneside]{book}
+
+% use 'paper' flag to distinguish printed version from electronic version
+\usepackage{etoolbox}
+\newtoggle{paper}
+\settoggle{paper}{false} % set to true for printed version
+
+% margin
+\iftoggle{paper}{
+  \usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2cm]{geometry}
+}{
+  \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+}
+
+% watermark
+\usepackage{background}
+\iftoggle{paper}{
+\backgroundsetup{contents={}}
+}{
+\backgroundsetup{
+  contents={\includegraphics[]{logo.jpg}},
+  scale=1,
+  opacity=0.4,
+  angle=0
+}
+}
+
+% line height
+\linespread{1.5}
+\usepackage{setspace}
+
+% indentation
+\usepackage{indentfirst}
+\setlength{\parindent}{0.88cm}
+
+% page numbering
+\usepackage{fancyhdr}
+\fancyhf{}
+\cfoot{\thepage}
+\pagestyle{fancy}
+
+% figure and table numbering
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+% prevent placing figure at the middle of a empty page
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+% prevent placing floats before a section
+\usepackage[section]{placeins}
+\let\Oldsubsection\subsection
+\renewcommand{\subsection}{\FloatBarrier\Oldsubsection}
+
+% graphics
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+
+% source code highlighting
+\usepackage{listings}
+\lstset{
+  numbers=none,
+  captionpos=b,
+  tabsize=2,
+  basicstyle=\small,
+  frame = single
+}
+
+% bibliography
+\usepackage[sorting=none,backend=bibtex]{biblatex}
+\addbibresource{reference.bib}
+
+% no header and footer bar
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Chinese typesetting
+\usepackage{xeCJK}
+\setCJKmainfont[
+  Path=fonts/,
+  BoldFont={SourceHanSansTW-Normal.otf},
+  ItalicFont={SourceHanSansTW-Light.otf}
+]{SourceHanSansTW-Light.otf}
+\newcommand{\myHuge}[1]{\fontsize{40}{50} #1}
+
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[nounderscore]{syntax}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+
+
+\newcommand{\chineseTitle}{基於卷積神經網路的論文自動生成技術}
+\newcommand{\englishTitle}{A CNN-based Automatic Thesis Generation Technique}
+
+\newcommand{\studentChName}{王大明}
+\newcommand{\studentEnName}{Ta-Ming Wang}
+\newcommand{\advisorChName}{吳小松}
+\newcommand{\advisorEnName}{Xiao-Sung Wu}
+
+
+
+\begin{document}
+
+\newgeometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\input{covers/front.tex}
+\restoregeometry
+
+\input{covers/inside.tex}
+
+\iftoggle{paper}{
+% \includepdf{pdf/certification.pdf}
+% \includepdf{pdf/authorization.pdf}
+}
+
+\pagenumbering{roman}
+
+\input{abstracts/ch.tex}
+\input{abstracts/en.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+\input{chapters/introduction.tex}
+\input{chapters/background.tex}
+\input{chapters/design.tex}
+\input{chapters/implementation.tex}
+\input{chapters/evaluation.tex}
+\input{chapters/related_work.tex}
+\input{chapters/discussion.tex}
+\input{chapters/conclusion.tex}
+
+\newpage
+\printbibliography[heading=bibintoc,title={References}]
+
+\end{document}
