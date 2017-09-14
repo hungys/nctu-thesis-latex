@@ -66,11 +66,11 @@ The following configurations can all be done in `thesis.tex`.
 ```
 
 - Paper submission
-    - Margin: 2.5cm-2.5cm-2.5cm-2.5cm
+    - Margin: 2.5cm-2.5cm-3cm-2cm (except front cover)
     - Without watermark
     - With required documents (i.e., 論文審訂書, 圖書館電子授權書)
 - Electronic submission
-    - Margin: 2.5cm-2.5cm-3cm-2cm (except front cover)
+    - Margin: 2.5cm-2.5cm-2.5cm-2.5cm
     - With watermark
 
 3. Update the content list once you made any change in `chapters/`.
