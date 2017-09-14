@@ -1,10 +1,31 @@
 \chapter{Implementation} \label{chapter:implementation}
 
-We implement the prototype on TensorFlow\cite{tensorflow} platform. Figure \ref{figure:tensorflow} shows the logo of TensorFlow.
-
 \begin{figure}[h!]
 \centering
-\includegraphics[width=6cm,keepaspectratio]{figures/tensorflow.png}
-\caption{TensorFlow}
-\label{figure:tensorflow}
+\includegraphics[width=4cm,keepaspectratio]{figures/tensorflow.png}
+\caption{TensorFlow's Logo}
+\label{figure:tensorflow_logo}
+\end{figure}
+
+We implement the prototype on TensorFlow\cite{tensorflow} platform. Figure \ref{figure:tensorflow_logo} shows the logo of TensorFlow, and Figure \ref{figure:code_snippet_of_model_training} shows the code snippet of model training.
+
+\begin{figure}[h!]
+\begin{lstlisting}[language=python]
+import tensorflow as tf
+
+def train(total_loss, global_step):
+  # Variables that affect learning rate.
+  num_batches_per_epoch = NUM_EXAMPLES_PER_EPOCH / FLAGS.batch_size
+  decay_steps = int(num_batches_per_epoch * NUM_EPOCHS_PER_DECAY)
+
+  # Decay the learning rate exponentially.
+  lr = tf.train.exponential_decay(INITIAL_LEARNING_RATE,
+                                  global_step,
+                                  decay_steps,
+                                  LEARNING_RATE_DECAY_FACTOR,
+                                  staircase=True)
+  tf.summary.scalar('learning_rate', lr)
+\end{lstlisting}
+\caption{Code Snippet of Model Training}
+\label{figure:code_snippet_of_model_training}
 \end{figure}
