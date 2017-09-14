@@ -37,7 +37,9 @@ NCTU Thesis Template for LaTeX
 
 # Configuration
 
-1. Fill in the thesis information in `thesis.tex`.
+The following configurations can all be done in `thesis.tex`.
+
+1. Fill in the thesis information.
 
 ```
 \def\universityCh{國立交通大學}
@@ -57,7 +59,7 @@ NCTU Thesis Template for LaTeX
 \def\defenseMonth{9}\def\defenseMonthEn{September}
 ```
 
-2. In `thesis.tex`, there is a flag called `paper` which can help you switch the format between paper submission and electronic submission.
+2. There is a flag called `paper` which can help you switch the format between paper submission and electronic submission.
 
 ```
 \settoggle{paper}{false} % set to true for paper submission
@@ -71,7 +73,20 @@ NCTU Thesis Template for LaTeX
     - Margin: 2.5cm-2.5cm-3cm-2cm
     - With watermark
 
-3. After oral defense, update the paths of required forms and documents in `thesis.tex`.
+3. Update the content list once you made any change in `chapters/`.
+
+```
+\input{chapters/introduction.tex}
+\input{chapters/background.tex}
+\input{chapters/design.tex}
+\input{chapters/implementation.tex}
+\input{chapters/evaluation.tex}
+\input{chapters/related_work.tex}
+\input{chapters/discussion.tex}
+\input{chapters/conclusion.tex}
+```
+
+4. After oral defense, update the paths of required forms and documents.
 
 ```
 \includepdf{pdf/certification.pdf}
