@@ -1,7 +1,7 @@
 NCTU Thesis Template for LaTeX
 ==============================
 
-**nctu-thesis-latex** is a LaTeX template forked from [chiehmin/nctu-thesis](https://github.com/chiehmin/nctu-thesis). Some improvements are added and the format is fune-tuned to meet the requirements of the thesis submitted to National Chiao Tung University.
+**nctu-thesis-latex** is a LaTeX template forked from [chiehmin/nctu-thesis](https://github.com/chiehmin/nctu-thesis). Some improvements are added and the format is fune-tuned to conform to the thesis specification[1] of National Chiao Tung University.
 
 # Sample
 
@@ -96,3 +96,7 @@ The following configurations can all be done in `thesis.tex`.
 # Environment
 
 I have only tested this template on [Overleaf](https://www.overleaf.com) with XeLaTeX engine. Local LaTeX environment may also work.
+
+# Reference
+
+[1] 國立交通大學學位論文格式規範, [https://goo.gl/hjESCa](https://goo.gl/hjESCa)
