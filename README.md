@@ -10,6 +10,31 @@ NCTU Thesis Template for LaTeX
 
 ![](sample.png)
 
+# Structure
+
+```
+.
+├── abstracts
+│   ├── ch.tex   <- write Chinese abstract here
+│   └── en.tex   <- write English abstract here
+├── chapters
+│   ├── introduction.tex   <-
+│   ├── ......             <- thesis content goes here
+│   └── conclusion.tex     <-
+├── covers
+│   ├── front.tex    <- no need for change except for customization
+│   └── inside.tex   <- no need for change except for customization
+├── figures
+│   ├── logo.jpg
+│   └── ......   <- put figures here
+├── pdf
+│   └── ......   <- put external PDF here
+├── fonts
+│   └── ......
+├── reference.bib   <- manage BibTeX reference here
+└── thesis.tex   <- main file for configurations
+```
+
 # Configuration
 
 1. Fill in the thesis information in `thesis.tex`.
