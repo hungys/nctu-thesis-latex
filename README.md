@@ -1,7 +1,7 @@
 NCTU Thesis Template for LaTeX
 ==============================
 
-**nctu-thesis-latex** is a LaTeX template forked from [chiehmin/nctu-thesis](https://github.com/chiehmin/nctu-thesis). Some improvements are added and the format is fune-tuned to conform to the thesis specification[1] of National Chiao Tung University.
+**nctu-thesis-latex** is a LaTeX template forked from [chiehmin/nctu-thesis](https://github.com/chiehmin/nctu-thesis). Some improvements are added and the format is fine-tuned to conform to the thesis specification[1] of National Chiao Tung University.
 
 # Sample
 
