@@ -16,8 +16,8 @@
 \def\studentEn{Ta-Ming Wang}
 \def\advisorCh{吳小松}
 \def\advisorEn{Xiao-Sung Wu}
-\def\defenseYear{2017}\def\defenseYearROC{106}
-\def\defenseMonth{9}\def\defenseMonthEn{September}
+\def\defenseYear{2020}\def\defenseYearROC{109}
+\def\defenseMonth{12}\def\defenseMonthEn{Dec}
 
 
 
@@ -39,7 +39,7 @@
 \backgroundsetup{contents={}}
 }{
 \backgroundsetup{
-  contents={\includegraphics[]{logo.jpg}},
+  contents={\includegraphics[]{figures/logo.jpg}},
   scale=1,
   opacity=0.4,
   angle=0
@@ -108,6 +108,7 @@
 
 \usepackage{pdfpages}
 \usepackage{multirow}
+\usepackage{subfigure}
 \usepackage{array}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -117,6 +118,9 @@
 \usepackage{subcaption}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+\usepackage{enumerate}
+\usepackage{dsfont}
+\usepackage{mathtools}
 
 
 
@@ -137,10 +141,17 @@
 
 \input{abstracts/ch.tex}
 \input{abstracts/en.tex}
+\input{abstracts/acknowledge.tex}
 
+\newpage
+\addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
-\listoffigures
+\clearpage
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+\clearpage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 
 \mainmatter
 
