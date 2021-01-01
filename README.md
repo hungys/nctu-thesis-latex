@@ -5,8 +5,7 @@ NCTU Thesis Template for LaTeX
 
 # Sample
 
-- Version for paper submission: [sample_paper.pdf](sample_paper.pdf)
-- Version for electronic submission: [sample_electronic.pdf](sample_electronic.pdf)
+Latest PDF built by GitHub Actions: [thesis.pdf](thesis.pdf)
 
 ![](sample.png)
 
@@ -95,8 +94,13 @@ The following configurations can all be done in `thesis.tex`.
 
 # Environment
 
-I have only tested this template on [Overleaf](https://www.overleaf.com) with XeLaTeX engine. Local LaTeX environment may also work.
+I have only tested this template on:
+
+- [Overleaf](https://www.overleaf.com)
+- [Tectonic](https://tectonic-typesetting.github.io/)
+
+Other LaTeX environment may also work.
 
 # Reference
 
-[1] 國立交通大學學位論文格式規範, [https://goo.gl/hjESCa](https://goo.gl/hjESCa)
+[1] 國立交通大學學位論文格式規範, [http://academic.nctu.edu.tw/GetFile.aspx?type=1&id=a0ebaa60-e780-4ad1-a9c3-99b2e372fbc5](http://academic.nctu.edu.tw/GetFile.aspx?type=1&id=a0ebaa60-e780-4ad1-a9c3-99b2e372fbc5)
